@@ -1,0 +1,28 @@
+body{
+    background-color: bisque;
+}
+
+
+h2{
+    /* styles consists of an attribute "value pair" */
+    color: rgb(68, 110, 187);
+    text-align: center;
+}
+
+img{
+    width: 400px;
+    
+}
+
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.firstCapyCaption{
+    color: palevioletred;
+}
+
+.highLight{
+    color: darkcyan;
+}
