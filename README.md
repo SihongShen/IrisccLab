@@ -1,10 +1,10 @@
 # Iris's ccLab
 
 here you can see my codes:
-https://github.com/SihongShen/IrisccLab
+[https://github.com/SihongShen/IrisccLab](https://github.com/SihongShen/IrisccLab)
 
 and this is the live version of it on Github Pages:
-https://sihongshen.github.io/IrisccLab/
+[https://sihongshen.github.io/IrisccLab/](https://sihongshen.github.io/IrisccLab/)
 
 this is the root, or very base of my cclab folder.
 
