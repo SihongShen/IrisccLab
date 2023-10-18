@@ -1,0 +1,22 @@
+body{
+ background-color:black;
+}
+
+h1{
+    color: aqua;
+    text-align: center;
+}
+h4{
+    color: aqua;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    color: aliceblue;
+}
+canvas{
+    border: 10px solid rgb(71, 71, 71);
+   display: block;
+   margin: auto;
+}
