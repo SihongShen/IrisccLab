@@ -137,8 +137,7 @@ function ball() {
   }
 
 function ballMoving() {
-  text("Now wait until it wakes up…",10,20);
-  
+
     noStroke();
     fill(0,0,0,90);
     circle(ballX, ballY, d);
