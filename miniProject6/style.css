@@ -13,3 +13,8 @@ canvas{
 h1{
   color:rgb(223, 103, 163);
 }
+
+p{
+  color: aliceblue;
+  text-align: center;
+}
