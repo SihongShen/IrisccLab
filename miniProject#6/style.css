@@ -1,0 +1,15 @@
+html, body {
+  margin: 0;
+  text-align: center;
+  background-color:black;
+}
+
+canvas{
+ border: 3px solid rgb(12,10,122);
+ display: block;
+ margin: auto;
+}
+
+h1{
+  color:rgb(223, 103, 163);
+}
