@@ -1,5 +1,5 @@
 
-let NUM_OF_PARTICLES = 300; 
+let NUM_OF_PARTICLES = 150; 
 
 let particles = [];
 
@@ -27,7 +27,7 @@ function draw() {
     p.display();
 
 
-    if(particles.length >= 300){
+    if(particles.length >= 150){
       particles.splice(i,1);
     }
 
