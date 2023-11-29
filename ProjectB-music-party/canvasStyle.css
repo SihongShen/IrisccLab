@@ -1,0 +1,21 @@
+
+
+body{ 
+    background-image: url('html-pictures/canvas-html-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+#canvasWrapper{
+    text-align: center;
+    /* outline: auto; */
+    position: relative;
+    margin-top: 20px;
+    margin-left: 120px;
+    margin-right: 120px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    background-color: rgba(240, 248, 255, 0.2);
+}
