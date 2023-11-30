@@ -22,6 +22,7 @@ let t=260;
 let tIncrease=-3;
 
 
+
 function preload(){
 
   for(let i=0; i<number; i++){
@@ -50,7 +51,7 @@ function setup(){
   players.push(new Player(50,50,87, 83, 65, 68));
   players.push(new Player(550,550,38, 40, 37, 39));
   players.push(new Player(550,50,73,75,74,76));
-  // console.log(fields)
+  // console.log(fields)；
 }
 
 function draw(){
@@ -84,7 +85,6 @@ function draw(){
     r=g=b=0;
   background(r,g,b);
   }
-  // console.log("track/pb"+counter+".mp3");
 
   if(firstInteraction == false){
     return
@@ -95,12 +95,16 @@ function draw(){
     fields[i].display();
     fields[i].checkPlayers()
 
+    if(fields[i].name ===1){
+      strokeWeight(3);
+    }
   }
 
   for(let i=0; i<players.length; i++){
     players[i].update();
     players[i].display();
   }
+
   
 
 }
@@ -114,6 +118,10 @@ class Field{
     this.sound.setVolume(this.vol)
     this.name = name;
     this.onField = false;
+
+    this.t0;
+    this.t0SinInput=0;
+    this.t0SinValue=260;
     
   }
 
@@ -122,21 +130,19 @@ class Field{
     translate(this.x, this.y);
 
     stroke(260);
+    strokeWeight(1);
     noFill();
 
     rect(0,0,aSquare,aSquare,15);
     text(this.name, 10, 10)
 
-    // console.log(this.sound)
+    // console.log(this.name);
     if(this.vol == 1){
       text("PLAYING", 10, 40);
     }
 
     pop();
 
-    // if(this.name == 1){
-
-    // }
   }
 
   checkPlayers() {
@@ -158,11 +164,34 @@ class Field{
     if (this.onField) {
       this.vol = 1;
       this.sound.setVolume(this.vol); 
+
+    
+
+      if(this.name == 0){
+        
+        push()
+        translate(this.x, this.y);
+        stroke(260);
+        fill(260,this.t0);
+        rect(0,0,aSquare,aSquare,15);
+
+        this.t0 = map(this.t0SinValue,-1,1,260,0);
+        this.t0SinValue = sin(this.t0SinInput);
+        this.t0SinInput +=0.096;
+        pop();
+      }
+      if(this.name == 1){
+        strokeWeight(3);
+      
+      }
     } else {
       this.vol = 0;
       this.sound.setVolume(this.vol); 
     }
+
+
   }
+
 }
 
 
