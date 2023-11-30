@@ -21,6 +21,10 @@ let b=260;
 let t=260;
 let tIncrease=-3;
 
+let img1;
+let img2;
+let img3;
+
 
 
 function preload(){
@@ -41,6 +45,9 @@ function preload(){
   }
 
   backgroundImage = loadImage("canvas-pictures/canvasBackground.jpg");
+  img1 = loadImage("canvas-pictures/player1.jpg");
+  img2 = loadImage("canvas-pictures/player2.jpg");
+  img3 = loadImage("canvas-pictures/player3.jpg");
 
 }
 
@@ -48,9 +55,9 @@ function setup(){
   let cnv = createCanvas(600, 600);
   cnv.parent("canvasWrapper");
 
-  players.push(new Player(50,50,87, 83, 65, 68));
-  players.push(new Player(550,550,38, 40, 37, 39));
-  players.push(new Player(550,50,73,75,74,76));
+  players.push(new Player(20,20,87, 83, 65, 68,img1));
+  players.push(new Player(550,550,38, 40, 37, 39,img2));
+  players.push(new Player(550,20,73,75,74,76,img3));
   // console.log(fields)；
 }
 
@@ -134,7 +141,7 @@ class Field{
     noFill();
 
     rect(0,0,aSquare,aSquare,15);
-    text(this.name, 10, 10)
+    // text(this.name, 10, 10)
 
     // console.log(this.name);
     if(this.vol == 1){
@@ -197,13 +204,14 @@ class Field{
 
 
 class Player{
-  constructor(startX,startY,up,down,left,right){
+  constructor(startX,startY,up,down,left,right,img){
     this.x = startX;
     this.y = startY;
     this.upKey = up;
     this.downKey = down;
     this.leftKey = left;
     this.rightKey = right;
+    this.img = img;
 
     this.speed = 2;
   }
@@ -227,8 +235,7 @@ class Player{
   }
 
   display(){
-    fill(255,3,3);
-    circle (this.x, this.y,20);
+    image(this.img,this.x,this.y,40,40);
 
   }
 
